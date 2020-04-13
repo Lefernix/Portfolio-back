@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+
 const projectSchema = new mongoose.Schema({
   id: {
     type: String,
@@ -21,10 +22,6 @@ const projectSchema = new mongoose.Schema({
     required: true,
   },
   //see more
-  images: {
-    type: Array,
-    required: true,
-  },
   tools: {
     type: Array,
     required: true,
