@@ -1,5 +1,13 @@
 const mongoose = require('mongoose');
-
+const ExpressGraphQL = require("express-graphql")
+const {
+  GraphQLID,
+  GraphQLString,
+  GraphQLList,
+  GraphQLObjectType,
+  GraphQLSchema,
+  GraphQLNonNull
+} = require("graphql")
 
 const projectSchema = new mongoose.Schema({
   id: {
@@ -13,7 +21,7 @@ const projectSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  template: {
+  mockup: {
     type: String,
     required: true,
   },
@@ -22,6 +30,10 @@ const projectSchema = new mongoose.Schema({
     required: true,
   },
   //see more
+  image: {
+    type: String,
+    required: true,
+  },
   tools: {
     type: Array,
     required: true,
