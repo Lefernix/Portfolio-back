@@ -1,0 +1,9 @@
+mutation {createProject(slug: "rosebud", title: "Rosebud", mockup: "rosebud.png", description:"Lorem Ipsum lalalalalala", tools: "NodeJS, React, Sequelize etc"){
+  id
+  slug
+  title
+  mockup
+  description
+  tools
+}
+}
