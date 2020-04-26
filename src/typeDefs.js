@@ -10,9 +10,12 @@ export const typeDefs = gql`
     title: String!
     mockup: String!
     description: String!
-    tools: String!
+    toolsFront: String
+    toolsBack: String
+    architecture: String
+    url: String!
   }
   type Mutation {
-    createProject(slug: String!, title: String!, mockup: String!, description: String!, tools: String!): Project!
+    createProject(slug: String!, title: String!, mockup: String!, description: String!, toolsFront: String, toolsBack: String, architecture: String, url: String!): Project!
   }
 `;

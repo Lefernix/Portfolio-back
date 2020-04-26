@@ -6,10 +6,9 @@ export const resolvers = {
     projects: () => Project.find()
   },
   Mutation: {
-    createProject: async (_, { slug, title, mockup, description, tools }) => {
-      const project = new Project({ slug, title, mockup, description, tools });
+    createProject: async (_, { slug, title, mockup, description, toolsFront, toolsBack, architecture, url }) => {
+      const project = new Project({ slug, title, mockup, description, toolsFront, toolsBack, architecture, url });
       await project.save();
-      console.log(project)
       return project;
     }
   }
