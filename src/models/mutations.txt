@@ -1,3 +1,31 @@
+sort : DESC A-Z
+
+mutation {createProject(slug: "heko", title: "Heko", mockup: "heko.png", description:"Heko est un outil de création de sites web hôteliers. En effet, l'application Heko permet à son utilisateur de créer comme il le souhaite son site web hôtelier grâce à une interface ergonomique et intuitive, tout en optimisant sa performance et son SEO.", toolsFront: "HTML5, CSS3,  ReactJS, JavaScript", toolsBack: "NodeJS, NoSQL", architecture: "REST", url: "in progress"){
+  id
+  slug
+  title
+  mockup
+  description
+  toolsFront
+  toolsBack
+  architecture
+  url
+}
+}
+
+mutation {createProject(slug: "portfolio", title: "Portfolio", mockup: "portfolio.png", description:"Ce portfolio est un dossier personnel numérique que j'ai créé de A à Z. Il me permet d'exploiter mes compétences et de tester de nouvelles technologies, le définissant comme un espace de sandboxing.", toolsFront: "HTML5, CSS3,  GatsbyJS, JavaScript", toolsBack: "NodeJS, NoSQL", architecture: "GraphQl", url: "https://github.com/lefernix/Portfolio-front"){
+  id
+  slug
+  title
+  mockup
+  description
+  toolsFront
+  toolsBack
+  architecture
+  url
+}
+}
+
 mutation {createProject(slug: "rosebud", title: "Rosebud", mockup: "rosebud.png", description:"Rosebud est une application web et web/mobile qui permet de mieux connaitre les spectateur-rice-s d'aujourd'hui, en leurs permettant d'évoquer des souvenirs et des émotions de cinéma et de séries, autant que de partager des images qui les ont marqué-e-s.", toolsFront: "HTML5, CSS3,  ReactJS, JavaScript", toolsBack: "NodeJS, SQL", architecture: "REST", url: "https://www.rosebud.website/"){
   id
   slug
@@ -22,15 +50,3 @@ mutation {createProject(slug: "wildgreenschool", title: "Wild Green School", moc
 }
 }
 
-mutation {createProject(slug: "heko", title: "Heko", mockup: "heko.png", description:"Heko est un outil de création de sites web hôteliers. En effet, l'application Heko permet à son utilisateur de créer comme il le souhaite son site web hôtelier grâce à une interface ergonomique et intuitive, tout en optimisant sa performance et son SEO.", toolsFront: "HTML5, CSS3,  ReactJS, JavaScript", toolsBack: "NodeJS, NoSQL", architecture: "REST", url: "in progress"){
-  id
-  slug
-  title
-  mockup
-  description
-  toolsFront
-  toolsBack
-  architecture
-  url
-}
-}
