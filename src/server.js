@@ -16,7 +16,6 @@ const startServer = async () => {
   const server = new ApolloServer({ typeDefs, resolvers });
 
   server.applyMiddleware({ app });
-  // app.use('/send', require('./mail'))
 
   app.listen({ port: 8001 }, () => {
     console.log(
