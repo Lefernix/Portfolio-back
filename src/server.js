@@ -11,15 +11,20 @@ const { connectDb } = require("../config/config.js");
 
 const startServer = async () => {
   const app = express();
+  const router = express.Router()
   app.use(cors());
 
   const server = new ApolloServer({ typeDefs, resolvers });
 
   server.applyMiddleware({ app });
+  
+  app.use(`/.netlify/functions/${server.graphqlPath}`, router);
 
-  app.listen({ port: 8001 }, () => {
+  const port = process.env.PORT || 8001;
+
+  app.listen(port, () => {
     console.log(
-      `🚀 Server ready at http://localhost:8001${server.graphqlPath}`
+      `🚀 Server ready at http://localhost:${port}${server.graphqlPath}`
     );
     connectDb().then(() => {
       console.log("MongoDb connected");
