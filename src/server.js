@@ -11,13 +11,16 @@ const { connectDb } = require("../config/config.js");
 
 const startServer = async () => {
   const app = express();
+  const routes = express.Router();
   app.use(cors());
 
   const server = new ApolloServer({ typeDefs, resolvers });
 
   server.applyMiddleware({ app });
 
-  const port = process.env.PORT || 4000;
+  const port = process.env.PORT || 8080;
+
+  app.use('/', routes);
 
   app.listen({ port }, () => {
     console.log(
