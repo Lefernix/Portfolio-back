@@ -1,5 +1,5 @@
 require("dotenv").config();
-import { ApolloServer } from "apollo-server-express";
+import { ApolloServer } from "apollo-server-lambda";
 import express from "express";
 import { resolvers } from "./resolvers";
 import { typeDefs } from "./typeDefs";
@@ -16,9 +16,9 @@ const startServer = async () => {
 
   const server = new ApolloServer({ typeDefs, resolvers });
 
-  server.applyMiddleware({ app });
+  // server.applyMiddleware({ app });
   
-  app.use(`/.netlify/functions/${server.graphqlPath}`, router);
+  app.use(`/.netlify/functions/graphql`, router);
 
   const port = process.env.PORT || 8001;
 
